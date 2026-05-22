@@ -24,15 +24,21 @@ export default function Header() {
   const [navOpen, setNavOpen] = useState(false);
   const [utilityOpen, setUtilityOpen] = useState(false);
 
-  return (
-    <>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-      />
+  const toggleNav = () => {
+    setNavOpen((open) => {
+      if (!open) setUtilityOpen(false);
+      return !open;
+    });
+  };
 
+  const toggleUtility = () => {
+    setUtilityOpen((open) => {
+      if (!open) setNavOpen(false);
+      return !open;
+    });
+  };
+
+  return (
       <header className="site-header">
         <div className="site-header__layout">
           <a href="#home" className="site-header__logo" aria-label="Markham Infiniti home">
@@ -48,7 +54,7 @@ export default function Header() {
                 type="button"
                 className="site-header__utility-toggle"
                 aria-expanded={utilityOpen}
-                onClick={() => setUtilityOpen((o) => !o)}
+                onClick={toggleUtility}
               >
                 Contact &amp; hours
               </button>
@@ -93,18 +99,6 @@ export default function Header() {
             </div>
 
             <div className="site-header__nav-row">
-              <button
-                type="button"
-                className={`site-header__menu-btn${navOpen ? " is-open" : ""}`}
-                aria-label={navOpen ? "Close menu" : "Open menu"}
-                aria-expanded={navOpen}
-                onClick={() => setNavOpen((o) => !o)}
-              >
-                <span />
-                <span />
-                <span />
-              </button>
-
               <nav className={`site-header__nav${navOpen ? " is-open" : ""}`}>
                 <ul>
                   {navLinks.map((item, index) => (
@@ -126,10 +120,21 @@ export default function Header() {
                   ))}
                 </ul>
               </nav>
+
+              <button
+                type="button"
+                className={`site-header__menu-btn${navOpen ? " is-open" : ""}`}
+                aria-label={navOpen ? "Close menu" : "Open menu"}
+                aria-expanded={navOpen}
+                onClick={toggleNav}
+              >
+                <span />
+                <span />
+                <span />
+              </button>
             </div>
           </div>
         </div>
       </header>
-    </>
   );
 }

@@ -1,58 +1,6 @@
-/* ========== RESET & BASE ========== */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* Main page layout and sections (globals live in index.css) */
 
-:root {
-  --purple: #5b2d8e;
-  --purple-dark: #3e1a6e;
-  --purple-light: #7b4db0;
-  --white: #ffffff;
-  --off-white: #f5f5f5;
-  --gray-light: #e8e8e8;
-  --gray-mid: #999;
-  --gray-dark: #444;
-  --text: #333;
-  --gold: #c8a84b;
-  --font-main: 'Raleway', 'Segoe UI', sans-serif;
-  --font-accent: 'Playfair Display', Georgia, serif;
-}
-
-body {
-  font-family: var(--font-main);
-  color: var(--text);
-  background: var(--white);
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-a { text-decoration: none; color: inherit; }
-img { max-width: 100%; display: block; }
-ul { list-style: none; }
-
-/* ── Social image links (footer) ── */
-.social-img-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 26px;
-  height: 26px;
-  border-radius: 4px;
-  overflow: hidden;
-  background: var(--purple);
-  transition: background 0.2s, transform 0.15s;
-  flex-shrink: 0;
-}
-.social-img-link:hover {
-  background: var(--purple-light);
-  transform: translateY(-1px);
-}
-.social-img-link img {
-  width: 16px;
-  height: 16px;
-  object-fit: contain;
-  filter: brightness(0) invert(1);
-}
-
-/* ========== HERO — banner image as content ========== */
+/*   HERO   */
 .hero {
   width: 100%;
   overflow: hidden;
@@ -64,132 +12,154 @@ ul { list-style: none; }
   width: 100%;
   height: auto;
 }
-/* ========== QUICK NAV CIRCLES ========== */
+/* New vehicles */
 .quick-nav {
-  background: #f7f7f7;
-  padding: 50px 20px;
-  overflow: hidden;
+  background-color: #f7f7f7;
+  background-image: url("../assets/Markham_VE (1)/bg_dotted_Line.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  padding: 44px 16px 52px;
 }
 
 .quick-nav-inner {
-  max-width: 1100px;
-  margin: auto;
-
+  max-width: var(--layout-max);
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  position: relative;
-}
-
-/* dotted curved line */
-.quick-nav-inner::before {
-  content: "";
-  position: absolute;
-  top: 60px;
-  left: 8%;
-  width: 84%;
-  height: 120px;
-
-  background: url("../assets/Markham_VE (1)/bg_dotted_Line.png")
-    center center / contain no-repeat;
-
-  z-index: 0;
-  opacity: 0.7;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 28px 32px;
+  flex-wrap: wrap;
 }
 
 .quick-item {
-  position: relative;
-  z-index: 2;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* main circle */
-.circle {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-
-  background: #fff;
-  border: 4px solid #8a8a8a;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-
-  position: relative;
-
-  transition: all 0.3s ease;
-
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  gap: 14px;
+  flex: 1 1 150px;
+  max-width: 200px;
+  min-width: 120px;
+  text-decoration: none;
+  color: inherit;
 }
 
-/* active purple one */
-.circle.active {
+.quick-circle {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: #fff;
+  border: 4px solid #8a8a8a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.quick-circle.is-active {
   background: #5b2d8e;
   border-color: #5b2d8e;
-
-  transform: scale(1.08);
+  transform: scale(1.06);
 }
 
-/* bottom pointer */
-.circle-pointer {
+.quick-pointer {
   position: absolute;
-  bottom: -10px;
-
-  width: 18px;
-  height: 18px;
-
-  background: inherit;
-
+  bottom: -9px;
+  width: 16px;
+  height: 16px;
+  background: #5b2d8e;
   transform: rotate(45deg);
-
-  border-right: inherit;
-  border-bottom: inherit;
+  border-right: 4px solid #5b2d8e;
+  border-bottom: 4px solid #5b2d8e;
 }
 
-/* icon image */
 .quick-icon {
-  width: 52px;
-  height: 52px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
-
-  margin-bottom: 12px;
 }
 
-/* text */
-.circle p {
-  margin: 0;
-
-  font-size: 20px;
+.quick-label {
+  font-size: 13px;
   font-weight: 700;
-  line-height: 1.2;
-
+  line-height: 1.35;
   text-align: center;
   color: #666;
-
-  max-width: 90px;
+  white-space: pre-line;
+  max-width: 120px;
 }
 
-/* active text white */
-.circle.active p {
-  color: white;
+.quick-item.is-active .quick-label {
+  color: #5b2d8e;
 }
 
-/* hover effect */
-.circle:hover {
-  transform: translateY(-5px);
+.quick-item:hover .quick-circle:not(.is-active) {
+  transform: translateY(-4px);
 }
 
-.circle.active:hover {
-  transform: scale(1.08) translateY(-5px);
+.quick-item:hover .quick-circle.is-active {
+  transform: scale(1.06) translateY(-4px);
 }
 
-/* ========== MODEL SHOWROOM ========== */
+@media (max-width: 900px) {
+  .quick-nav {
+    padding: 36px 12px 40px;
+  }
+
+  .quick-nav-inner {
+    gap: 24px 16px;
+  }
+
+  .quick-item {
+    flex: 1 1 calc(50% - 16px);
+    max-width: none;
+  }
+
+  .quick-circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .quick-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .quick-label {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quick-nav-inner {
+    gap: 20px 12px;
+  }
+
+  .quick-item {
+    flex: 1 1 calc(50% - 10px);
+    min-width: 0;
+    gap: 10px;
+  }
+
+  .quick-circle {
+    width: 100px;
+    height: 100px;
+    border-width: 3px;
+  }
+
+  .quick-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .quick-label {
+    font-size: 11px;
+    max-width: 100px;
+  }
+}
+
+/*   MODEL SHOWROOM   */
 .showroom {
   background: #f7f7f7;
   padding: 40px 16px;
@@ -287,17 +257,18 @@ ul { list-style: none; }
   pointer-events: none;
 }
 
-/* ========== WELCOME SECTION ========== */
+/*   WELCOME SECTION   */
 .welcome {
   padding: 52px 20px 80px;
-  background-image: url("../assets/Markham_VE\ \(1\)/welocme_bg.png");
+  background-image: url("../assets/Markham_VE (1)/welocme_bg.png");
   background-repeat: repeat;
   background-position: center top;
-  font-family: "Open Sans", Arial, sans-serif;
+  background-size: auto;
+  font-family: var(--font-body);
 }
 
 .welcome-inner {
-  max-width: 1160px;
+  max-width: var(--layout-max);
   margin: 0 auto;
 }
 
@@ -373,16 +344,9 @@ ul { list-style: none; }
   z-index: 1;
   box-sizing: border-box;
   margin-bottom: 8px;
-}
-
-.feature-item .diamond-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  z-index: 0;
-  pointer-events: none;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
 }
 
 .feature-item .icon-img {
@@ -534,15 +498,15 @@ ul { list-style: none; }
   flex-shrink: 0;
 }
 
-/* ========== NEWS & VIDEO ========== */
+/*   NEWS & VIDEO   */
 .news-section {
   padding: 44px 16px 52px;
   background: #fff;
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: var(--font-body);
 }
 
 .news-inner {
-  max-width: 1160px;
+  max-width: var(--layout-max);
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -805,7 +769,7 @@ ul { list-style: none; }
   border-radius: 0;
 }
 
-/* ========== RESPONSIVE ========== */
+/*   RESPONSIVE   */
 @media (max-width: 900px) {
   .news-inner {
     grid-template-columns: 1fr;
@@ -849,8 +813,6 @@ ul { list-style: none; }
   .video-player__screen {
     height: 180px;
   }
-  .quick-nav-inner { gap: 0; }
-  .circle { width: 66px; height: 66px; }
 }
 @media (max-width: 400px) {
   .showroom-grid { grid-template-columns: 1fr; }
