@@ -9,7 +9,7 @@ import CtaFour from "../assets/Markham_VE/cta_04.png";
 import CarOne from "../assets/Markham_VE/car_01.png";
 import CarTwo from "../assets/Markham_VE/car_02.png";
 import CarThree from "../assets/Markham_VE/car_03.png";
-import CarFour from "../assets/Markham_VE/car_04.png";
+import CarFour from "../assets/Markham_VE/Car_04.png";
 import EventCar from "../assets/Markham_VE/event.png";
 import PlusIcon from "../assets/Markham_VE/Plus.png";
 import DedicatedHover from "../assets/Markham_VE/dedicated_hover.png";
