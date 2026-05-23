@@ -1,14 +1,14 @@
 import { useState } from "react";
 import "./header.css";
-import Logo from "../assets/Markham_VE (1)/Logo.png";
-import HeaderStrip from "../assets/Markham_VE (1)/Header_strip.png";
-import LocationIcon from "../assets/Markham_VE (1)/location.png";
-import CallIcon from "../assets/Markham_VE (1)/call.png";
-import SalesIcon from "../assets/Markham_VE (1)/toll-free.png";
-import SubMenuArrow from "../assets/Markham_VE (1)/sub_menu_arw.png";
-import Fb from "../assets/Markham_VE (1)/fb.png";
-import Twitter from "../assets/Markham_VE (1)/tw.png";
-import YouTube from "../assets/Markham_VE (1)/yt.png";
+import Logo from "../assets/Markham_VE/Logo.png";
+import HeaderStrip from "../assets/Markham_VE/Header_strip.png";
+import LocationIcon from "../assets/Markham_VE/location.png";
+import CallIcon from "../assets/Markham_VE/call.png";
+import SalesIcon from "../assets/Markham_VE/toll-free.png";
+import SubMenuArrow from "../assets/Markham_VE/sub_menu_arw.png";
+import Fb from "../assets/Markham_VE/fb.png";
+import Twitter from "../assets/Markham_VE/tw.png";
+import YouTube from "../assets/Markham_VE/yt.png";
 
 const navLinks = [
   { label: "Home", href: "#home", active: true, dropdown: false },

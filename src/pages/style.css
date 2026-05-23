@@ -15,7 +15,7 @@
 /* New vehicles */
 .quick-nav {
   background-color: #f7f7f7;
-  background-image: url("../assets/Markham_VE (1)/bg_dotted_Line.png");
+  background-image: url("../assets/Markham_VE/bg_dotted_Line.png");
   background-repeat: no-repeat;
   background-size: 100% auto;
   padding: 44px 16px 52px;
@@ -260,7 +260,7 @@
 /*   WELCOME SECTION   */
 .welcome {
   padding: 52px 20px 80px;
-  background-image: url("../assets/Markham_VE (1)/welocme_bg.png");
+  background-image: url("../assets/Markham_VE/welocme_bg.png");
   background-repeat: repeat;
   background-position: center top;
   background-size: auto;

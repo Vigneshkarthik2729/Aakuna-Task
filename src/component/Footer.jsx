@@ -1,8 +1,8 @@
 import "./footer.css";
-import FooterMapBg from "../assets/Markham_VE (1)/footer_map_bg.jpg.png";
-import Fb from "../assets/Markham_VE (1)/fb.png";
-import Twitter from "../assets/Markham_VE (1)/tw.png";
-import YouTube from "../assets/Markham_VE (1)/yt.png";
+import FooterMapBg from "../assets/Markham_VE/footer_map_bg.jpg.png";
+import Fb from "../assets/Markham_VE/fb.png";
+import Twitter from "../assets/Markham_VE/tw.png";
+import YouTube from "../assets/Markham_VE/yt.png";
 
 const Icon = ({ d, size = 18 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">

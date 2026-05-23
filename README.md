@@ -16,7 +16,7 @@ A responsive marketing homepage for **Markham Infiniti** dealership, built from 
 | **Styling** | Plain CSS (component-scoped + page styles) |
 | **Fonts** | Google Fonts — Raleway, Open Sans, Playfair Display |
 | **Linting** | ESLint 10 |
-| **Assets** | PNG/JPG design exports in `src/assets/Markham_VE (1)/` |
+| **Assets** | PNG/JPG design exports in `src/assets/Markham_VE/` |
 
 There is no backend, routing library, or CSS framework — the project focuses on **pixel-close UI implementation**, **responsive layout**, and **clean component structure**.
 
@@ -92,7 +92,7 @@ markham-website/
 ├── public/                      # Favicon and static files
 ├── src/
 │   ├── assets/
-│   │   └── Markham_VE (1)/      # Design images (banner, cars, icons, etc.)
+│   │   └── /      # Design images (banner, cars, icons, etc.)
 │   ├── component/
 │   │   ├── Header.jsx           # Top bar + navigation (mobile menu)
 │   │   ├── header.css

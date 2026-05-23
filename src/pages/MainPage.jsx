@@ -1,27 +1,27 @@
 import "./style.css";
 import Header from "../component/Header";
 import Footer from "../component/Footer";
-import Banner from "../assets/Markham_VE (1)/banner.png";
-import CtaOne from "../assets/Markham_VE (1)/cta_01.png";
-import CtaTwo from "../assets/Markham_VE (1)/cta_02.png";
-import CtaThree from "../assets/Markham_VE (1)/book_white.png";
-import CtaFour from "../assets/Markham_VE (1)/cta_04.png";
-import CarOne from "../assets/Markham_VE (1)/car_01.png";
-import CarTwo from "../assets/Markham_VE (1)/car_02.png";
-import CarThree from "../assets/Markham_VE (1)/car_03.png";
-import CarFour from "../assets/Markham_VE (1)/car_04.png";
-import EventCar from "../assets/Markham_VE (1)/event.png";
-import PlusIcon from "../assets/Markham_VE (1)/Plus.png";
-import DedicatedHover from "../assets/Markham_VE (1)/dedicated_hover.png";
-import GrayDiamond from "../assets/Markham_VE (1)/gray_bg.png";
-import VioletDiamond from "../assets/Markham_VE (1)/viloet_bg.png";
-import FamilyOwnedIcon from "../assets/Markham_VE (1)/family_owned.png";
-import ProfessionalIcon from "../assets/Markham_VE (1)/professional.png";
-import WelcomeBg from "../assets/Markham_VE (1)/welocme_bg.png";
-import ReadMoreIcon from "../assets/Markham_VE (1)/read-more.png";
-import VideoLeftArw from "../assets/Markham_VE (1)/video_left_arw.png";
-import VideoRightArw from "../assets/Markham_VE (1)/video_right_arw.png";
-import QuickNavBg from "../assets/Markham_VE (1)/bg_dotted_Line.png";
+import Banner from "../assets/Markham_VE/banner.png";
+import CtaOne from "../assets/Markham_VE/cta_01.png";
+import CtaTwo from "../assets/Markham_VE/cta_02.png";
+import CtaThree from "../assets/Markham_VE/book_white.png";
+import CtaFour from "../assets/Markham_VE/cta_04.png";
+import CarOne from "../assets/Markham_VE/car_01.png";
+import CarTwo from "../assets/Markham_VE/car_02.png";
+import CarThree from "../assets/Markham_VE/car_03.png";
+import CarFour from "../assets/Markham_VE/car_04.png";
+import EventCar from "../assets/Markham_VE/event.png";
+import PlusIcon from "../assets/Markham_VE/Plus.png";
+import DedicatedHover from "../assets/Markham_VE/dedicated_hover.png";
+import GrayDiamond from "../assets/Markham_VE/gray_bg.png";
+import VioletDiamond from "../assets/Markham_VE/viloet_bg.png";
+import FamilyOwnedIcon from "../assets/Markham_VE/family_owned.png";
+import ProfessionalIcon from "../assets/Markham_VE/professional.png";
+import WelcomeBg from "../assets/Markham_VE/welocme_bg.png";
+import ReadMoreIcon from "../assets/Markham_VE/read-more.png";
+import VideoLeftArw from "../assets/Markham_VE/video_left_arw.png";
+import VideoRightArw from "../assets/Markham_VE/video_right_arw.png";
+import QuickNavBg from "../assets/Markham_VE/bg_dotted_Line.png";
 
 const PlayIcon = ({ size = 18 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
