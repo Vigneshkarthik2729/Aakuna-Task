@@ -2,8 +2,6 @@
 
 A responsive marketing homepage for **Markham Infiniti** dealership, built from a visual design (VE mockup). The site presents inventory, welcome content, news, and contact information in a single-page layout.
 
-**Related docs:** [REQUIREMENTS_CHECKLIST.md](./REQUIREMENTS_CHECKLIST.md) (assignment compliance) · [INTERVIEW_PREP.txt](./INTERVIEW_PREP.txt) (interview talking points)
-
 ---
 
 ## Technologies Used
@@ -109,8 +107,6 @@ markham-website/
 ├── vite.config.js
 ├── eslint.config.js
 ├── README.md                    # This file
-├── REQUIREMENTS_CHECKLIST.md    # Assignment requirements mapping
-└── INTERVIEW_PREP.txt           # Interview preparation notes
 ```
 
 ---
@@ -147,14 +143,6 @@ markham-website/
 | Desktop | > 1024px | Full header, 4 quick-nav items, 4-column showroom |
 | Tablet | 900–1024px | Condensed header, 2×2 quick nav, 2-column showroom |
 | Mobile | ≤ 900px | Hamburger menu, stacked welcome diamonds, single-column news |
-
----
-
-## Interview Preparation
-
-For a 30-second pitch, section-by-section work log, challenges, and sample Q&A, see:
-
-**[INTERVIEW_PREP.txt](./INTERVIEW_PREP.txt)**
 
 ---
 
