@@ -19,19 +19,19 @@ const ICONS = {
 };
 
 const quickLinks = [
-  "Home",
-  "New Vehicles",
-  "Used Vehicles",
-  "Service",
-  "Parts",
-  "Financial Services",
-  "Contact Us",
-  "Sitemap",
+  { label: "Home", href: "#home" },
+  { label: "New Vehicles", href: "#new-vehicles" },
+  { label: "Used Vehicles", href: "#used-vehicles" },
+  { label: "Service", href: "#service" },
+  { label: "Parts", href: "#parts" },
+  { label: "Financial Services", href: "#financial-services" },
+  { label: "Contact Us", href: "#contact-us" },
+  { label: "Sitemap", href: "#sitemap" },
 ];
 
 export default function Footer() {
   return (
-    <footer className="site-footer">
+    <footer className="site-footer" id="contact">
       <div
         className="footer-map"
         style={{
@@ -88,17 +88,17 @@ export default function Footer() {
       </div>
 
       <div className="footer-quick-bar">
-        <div className="footer-quick-bar__inner">
-          <span className="footer-quick-tab">Quick Links</span>
-          <nav className="quick-links" aria-label="Quick links">
-            {quickLinks.map((l) => (
-              <a key={l} href={`#${l.toLowerCase().replace(/ /g, "-")}`}>
-                {l}
-              </a>
-            ))}
-          </nav>
-        </div>
-      </div>
+  <div className="footer-quick-bar__inner">
+    <span className="footer-quick-tab">Quick Links</span> 
+    <nav className="quick-links" aria-label="Quick links">
+      {quickLinks.map((link) => (
+        <a key={link.label} href={link.href}>
+          {link.label}
+        </a>
+      ))}
+    </nav>
+  </div>
+</div>
 
       <div className="footer-legal">
         <div className="footer-legal__inner">

@@ -48,7 +48,7 @@ export default function MainPage() {
     <div className="markham-root">
       <Header />
 
-      <section className="hero">
+      <section className="hero" id="home">
         <img
           src={Banner}
           alt="Markham Infiniti showroom banner"
